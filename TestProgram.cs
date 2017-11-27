@@ -1,20 +1,21 @@
 using System;
 using System.Collections.Generic;
+using DStarLite;
 
-namespace DStarLite
+namespace DStarLiteTest
 {
     class TestProgram
     {
         static void Main(string[] args)
         {
             Test test = new Test();
-            DStarLite.RunDStarLite(0, 1, 8, 6, test);
+            DStarLite.DStarLite.RunDStarLite(0, 1, 8, 6, test);
             Console.WriteLine("Press enter to close...");
             Console.ReadLine();
         }
     }
 
-    class Test : DStarLiteEnvironment
+    class Test : DStarLite.DStarLiteEnvironment
     {
         int time = 0;
         int px = 0;
